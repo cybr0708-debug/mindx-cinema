@@ -1,0 +1,180 @@
+/* ===== BASIC RESET ===== */
+body {
+  margin: 0;
+  padding: 0;
+  background: #121212;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== PAGE WRAP (DỌC) ===== */
+h1#productName,
+#productImg,
+#productPrice,
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== TITLE ===== */
+#productName {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 28px;
+}
+
+/* ===== IMAGE ===== */
+#productImg {
+  width: 90%;
+  max-width: 420px;
+  margin-bottom: 20px;
+  border-radius: 14px;
+}
+
+/* ===== PRICE ===== */
+#productPrice {
+  font-size: 22px;
+  font-weight: bold;
+  color: #4caf50;
+  margin-bottom: 30px;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  width: 90%;
+  max-width: 420px;
+  padding: 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Add to cart */
+#addBtn {
+  background: #ff5252;
+  color: #fff;
+}
+
+#addBtn:hover {
+  background: #ff1744;
+}
+
+/* Back */
+button:last-of-type {
+  background: #333;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+button:last-of-type:hover {
+  background: #444;
+}
+/* ===== PRICE ===== */
+#productPrice {
+  font-size: 24px;        /* to hơn */
+  font-weight: bold;
+  color: #4caf50;         /* xanh nổi */
+  margin: 16px auto 24px;
+  text-align: center;
+}
+#productInfo {
+  max-width: 600px;
+  margin: 12px auto 24px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  text-align: center;
+}
+/* Các biến root liên quan đến màu sắc/hiệu ứng của Navbar */
+/* Các biến root liên quan đến màu sắc/hiệu ứng của Navbar */
+:root {
+  --primary: #ff7a00;
+  --dark: #111;
+  --dark-2: #1a1a1a;
+  --text: #fff;
+  --muted: #aaa;
+  --radius: 10px;
+  --transition: 0.25s ease;
+}
+
+/* Định dạng cơ bản cho Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(15, 15, 15, 0.9);
+  backdrop-filter: blur(6px);
+}
+
+/* Căn lề và dàn hàng cho Navbar */
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Khối bên trái (Logo và Menu) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-menu a:hover {
+  color: var(--primary);
+}
+
+/* Khối bên phải (User và Buttons) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.welcome {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Định dạng các nút bấm trên Navbar */
+.btn-outline {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: #000;
+}

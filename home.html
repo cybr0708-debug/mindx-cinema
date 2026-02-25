@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>ForsakenShop | Trang chủ</title>
+  <link rel="stylesheet" href="home.css">
+  <script src="home.js" defer></script>
+</head>
+<body>
+
+<!-- HEADER / NAVBAR -->
+<header class="header">
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="logo">ForsakenShop</span>
+      <ul class="nav-menu">
+        <li><a href="home.html">Trang chủ</a></li>
+        <li><a href="#">Sản phẩm</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#">Liên hệ</a></li>
+        <li><a href="add-product.html">Thêm sản phẩm</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-right">
+      <span class="welcome">
+        Xin chào, <b id="username">Khách</b>
+      </span>
+      <button class="btn-outline" onclick="toggleCart()">🛒 Giỏ hàng</button>
+      <button class="btn-outline" onclick="logout()">Đăng xuất</button>
+      <button class="btn-outline" onclick="openProfile()">👤 Profile</button>
+    </div>
+  </nav>
+</header>
+
+<!-- BANNER -->
+<section class="banner">
+  <div class="banner-overlay">
+    
+    <h1>MUA LAPTOP</h1>
+    <p>TẶNG SẠC + BALO</p>
+  </div>
+</section>
+
+<!-- TOOLBAR -->
+<section class="toolbar">
+  <input
+    type="search"
+    id="search"
+    placeholder="Bạn tìm gì hôm nay..."
+    oninput="renderProducts()"
+  >
+
+  <select id="filter" onchange="renderProducts()">
+    <option value="all">Tất cả</option>
+    <option value="phukien">Phụ kiện</option>
+    <option value="gaming">Gaming</option>
+  </select>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products">
+  <div class="products-grid" id="productList"></div>
+</section>
+
+<!-- CART -->
+<aside class="cart" id="cart">
+  <button class="cart-close" onclick="toggleCart()">×</button>
+  <h2>🛒 Giỏ hàng</h2>
+
+  <div id="cartItems" class="cart-items"></div>
+
+  <div class="cart-summary">
+    Tổng cộng: <strong id="totalPrice">0</strong> đ
+  </div>
+</aside>
+<div id="profileOverlay" class="profile-overlay" onclick="closeProfileOutside(event)">
+  <div class="profile-modal">
+    <button class="cart-close" onclick="toggleProfile()">×</button>
+    <h2>👤 Hồ sơ cá nhân</h2>
+
+    <div class="cart-checkout-form" style="margin-top: 20px;">
+  <label>Tên tài khoản:</label>
+  <input type="text" id="profileUser" readonly style="background: #222; opacity: 0.7;">
+
+  <div id="passwordArea">
+    <label>Mật khẩu hiện tại:</label>
+    <input type="password" id="currentPass" value="********" readonly style="background: #222;">
+    
+    <button class="btn-pay" onclick="showChangePassForm()">Đổi mật khẩu</button>
+  </div>
+
+  <div id="changePassForm" style="display: none; margin-top: 10px; border-top: 1px dashed #444; padding-top: 10px;">
+    <label>Mật khẩu mới:</label>
+    <input type="password" id="newPass" placeholder="Nhập mật khẩu mới">
+    <label>Xác nhận mật khẩu:</label>
+    <input type="password" id="confirmPass" placeholder="Nhập lại mật khẩu mới">
+    
+    <div style="display: flex; gap: 10px; margin-top: 10px;">
+      <button class="btn-pay" style="flex: 1; background: #28a745;" onclick="saveNewPass()">Lưu</button>
+      <button class="btn-pay" style="flex: 1; background: #dc3545;" onclick="hideChangePassForm()">Hủy</button>
+    </div>
+  </div>
+</div>
+
+      <hr style="margin: 20px 0; border: 0.5px solid #444">
+      
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <span>Chế độ giao diện:</span>
+        <button class="btn-outline" onclick="toggleTheme()">🌓 Sáng / Tối</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FOOTER -->
+<footer class="footer">
+  © 2026 ForsakenShop
+</footer>
+
+</body>
+</html>

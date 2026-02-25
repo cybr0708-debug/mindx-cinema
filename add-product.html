@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thêm sản phẩm | ForsakenShop</title>
+  <link rel="stylesheet" href="add-product.css">
+  <script src="add-product.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="navbar">
+    <span class="logo">ForsakenShop</span>
+    <a href="home.html" class="btn-outline">← Quay về trang chủ</a>
+  </div>
+</header>
+
+<main class="container">
+  <h1>➕ Thêm sản phẩm</h1>
+
+  <form id="addProductForm">
+    <label>Tên sản phẩm</label>
+    <input type="text" id="name" placeholder="VD: Laptop Gaming" required>
+
+    <label>Giá (VND)</label>
+    <input type="number" id="price" placeholder="25000000" required>
+
+    <label>Danh mục</label>
+    <select id="category">
+      <option value="gaming">Gaming</option>
+      <option value="phukien">Phụ kiện</option>
+    </select>
+    <label>Mô tả sản phẩm</label>
+<textarea
+  id="info"
+  placeholder="Nhập mô tả / thông tin chi tiết sản phẩm..."
+  rows="4"
+></textarea>
+    <label>Link ảnh</label>
+    <input type="text" id="image" placeholder="https://...">
+
+    <button type="submit">Thêm sản phẩm</button>
+
+    <p id="msg"></p>
+  </form>
+</main>
+
+<footer class="footer">
+  © 2026 ForsakenShop
+</footer>
+
+</body>
+</html>

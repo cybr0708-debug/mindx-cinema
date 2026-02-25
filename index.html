@@ -1,1 +1,62 @@
-//form 
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <body>
+  <div class="page">
+
+    <div class="hero">
+      <div class="hero-content">
+        <h1>Mua sắm thông minh</h1>
+        <p>Hàng chính hãng • Giá tốt • Giao nhanh</p>
+        <div class="hero-cards">
+<div class="product-grid">
+  <div class="product-card">
+    <img src="https://i.postimg.cc/50yK7fH0/OIP.webp" />
+    <span>Điện thoại</span>
+  </div>
+
+  <div class="product-card">
+    <img src="https://i.postimg.cc/CxJWmPvP/OIP.webp" />
+    <span>Phụ kiện</span>
+  </div>
+
+  <div class="product-card">
+    <img src="https://i.postimg.cc/Wz40M74d/download.webp" />
+    <span>Laptop</span>
+  </div>
+</div>
+
+</div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="form-box">
+        <h2>Đăng nhập</h2>
+
+        <input type="text" id="loginUser" placeholder="Tên đăng nhập">
+        <input type="password" id="loginPass" placeholder="Mật khẩu">
+
+        <button onclick="login()">Đăng nhập</button>
+
+        <p>
+          Chưa có tài khoản?
+          <a href="register.html"  onclick="clearLogin()">Đăng ký</a>
+        </p>
+
+        <p id="msg"></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- NỬA BÊN TRÁI -->
+    <div class="hero">
+      <div class="hero-content">
+        <h1>Tạo tài khoản</h1>
+        <p>
+          Đăng ký để mua sắm nhanh hơn, theo dõi đơn hàng
+          và nhận ưu đãi độc quyền
+        </p>
+
+        <!-- GRID 3 ẢNH (GIỐNG LOGIN) -->
+        <div class="product-grid">
+  <div class="product-card">
+    <img src="https://i.postimg.cc/50yK7fH0/OIP.webp" />
+    <span>Điện thoại</span>
+  </div>
+
+  <div class="product-card">
+    <img src="https://i.postimg.cc/CxJWmPvP/OIP.webp" />
+    <span>Phụ kiện</span>
+  </div>
+
+  <div class="product-card">
+    <img src="https://i.postimg.cc/Wz40M74d/download.webp" />
+    <span>Laptop</span>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <!-- NỬA BÊN PHẢI -->
+    <div class="container">
+      <div class="form-box">
+        <h2>Đăng ký</h2>
+
+        <input type="text" id="regUser" placeholder="Tên đăng nhập">
+        <input type="password" id="regPass" placeholder="Mật khẩu">
+        <input type="password" id="regPass2" placeholder="Nhập lại mật khẩu">
+        <button onclick="register()">Đăng ký</button>
+
+        <p>
+          Đã có tài khoản?
+          <a href="index.html" onclick="clearRegister()">Đăng nhập</a>
+        </p>
+
+        <p id="msg"></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="register.js"></script>
+</body>
+</html>

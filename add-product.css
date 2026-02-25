@@ -1,0 +1,134 @@
+:root {
+  --primary: #ff7a00;
+  --dark: #111;
+  --dark-2: #1a1a1a;
+  --text: #fff;
+  --muted: #aaa;
+  --radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #0e0e0e;
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.header {
+  background: #111;
+  position: sticky;
+  top: 0;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.btn-outline {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* MAIN */
+.container {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 30px;
+  background: var(--dark-2);
+  border-radius: var(--radius);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--primary);
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+input, select {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #111;
+  color: var(--text);
+}
+
+button {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#msg {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #111;
+  color: var(--text);
+  font-family: inherit;
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.6;
+}
+
+textarea::placeholder {
+  color: #666;
+}
