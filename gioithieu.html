@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>ForsakenShop | Giới thiệu</title>
+  <link rel="stylesheet" href="home.css">
+  <script src="home.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="logo" hrel="home.html">ForsakenShop</span>
+      <ul class="nav-menu">
+        <li><a href="home.html">Trang chủ</a></li>
+        <li><a href="gioithieu.html">Giới thiệu</a></li>
+        <li><a href="lienhe.html">Liên hệ</a></li>
+        <li><a href="add-product.html">Thêm sản phẩm</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-right">
+      <span class="welcome">
+        Xin chào, <b id="username">Khách</b>
+      </span>
+      <button class="btn-outline" onclick="toggleCart()">🛒 Giỏ hàng</button>
+      <button class="btn-outline" onclick="openProfile()">👤 Profile</button>
+      <button class="btn-outline" onclick="logout()">Đăng xuất</button>
+    </div>
+  </nav>
+</header>
+
+<section class="banner" style="height: 300px; background-image: url('https://i.postimg.cc/fbD7frkK/OIP.webp');">
+  <div class="banner-overlay">
+    <h1>VỀ FORSAKEN SHOP</h1>
+    <p>Nâng tầm trải nghiệm Gaming của bạn</p>
+  </div>
+</section>
+
+<main class="products" style="margin-top: 50px;">
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 50px;">
+    <div class="product" style="cursor: default; padding: 30px;">
+      <h2 style="color: var(--primary); margin-bottom: 15px;">Câu chuyện của chúng tôi</h2>
+      <p style="color: #ccc; line-height: 1.6;">
+        Được thành lập từ năm 2026, ForsakenShop khởi đầu từ niềm đam mê mãnh liệt với các thiết bị công nghệ và thế giới Gaming. Chúng tôi hiểu rằng, một chiếc laptop mạnh mẽ hay một bàn phím cơ chuẩn xác không chỉ là thiết bị, mà còn là người bạn đồng hành trên con đường chinh phục các đỉnh cao.
+      </p>
+    </div>
+
+    <div class="product" style="cursor: default; padding: 30px;">
+      <h2 style="color: var(--primary); margin-bottom: 15px;">Tầm nhìn & Sứ mệnh</h2>
+      <p style="color: #ccc; line-height: 1.6;">
+        Sứ mệnh của chúng tôi là mang đến những sản phẩm công nghệ chất lượng nhất với mức giá hợp lý nhất cho cộng đồng Game thủ Việt Nam. ForsakenShop hướng tới trở thành hệ thống bán lẻ thiết bị Gaming hàng đầu, nơi uy tín và sự hài lòng của khách hàng là ưu tiên số một.
+      </div>
+  </div>
+
+  <h2 style="text-align: center; color: var(--primary); margin-bottom: 30px;">TẠI SAO CHỌN CHÚNG TÔI?</h2>
+  <div class="products-grid">
+    <div class="product" style="text-align: center; padding: 20px;">
+      <div style="font-size: 40px;">🛡️</div>
+      <h3>Hàng Chính Hãng</h3>
+      <p style="color: var(--muted); font-size: 14px;">Cam kết 100% sản phẩm nguồn gốc rõ ràng, bảo hành uy tín.</p>
+    </div>
+    <div class="product" style="text-align: center; padding: 20px;">
+      <div style="font-size: 40px;">⚡</div>
+      <h3>Giao Hàng Tốc Độ</h3>
+      <p style="color: var(--muted); font-size: 14px;">Hỗ trợ giao hàng nội thành siêu tốc trong vòng 2 giờ.</p>
+    </div>
+    <div class="product" style="text-align: center; padding: 20px;">
+      <div style="font-size: 40px;">🎧</div>
+      <h3>Hỗ Trợ 24/7</h3>
+      <p style="color: var(--muted); font-size: 14px;">Đội ngũ kỹ thuật viên luôn sẵn sàng giải đáp mọi thắc mắc.</p>
+    </div>
+    <div class="product" style="text-align: center; padding: 20px;">
+      <div style="font-size: 40px;">💰</div>
+      <h3>Giá Cả Cạnh Tranh</h3>
+      <p style="color: var(--muted); font-size: 14px;">Nhiều chương trình khuyến mãi và quà tặng hấp dẫn đi kèm.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer" style="margin-top: 50px;">
+  © 2026 ForsakenShop - Gaming Is Life
+</footer>
+
+</body>
+</html>

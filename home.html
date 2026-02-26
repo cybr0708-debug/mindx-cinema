@@ -12,12 +12,11 @@
 <header class="header">
   <nav class="navbar">
     <div class="nav-left">
-      <span class="logo">ForsakenShop</span>
+      <span class="logo" hrel="home.html">ForsakenShop</span>
       <ul class="nav-menu">
         <li><a href="home.html">Trang chủ</a></li>
-        <li><a href="#">Sản phẩm</a></li>
-        <li><a href="#">Giới thiệu</a></li>
-        <li><a href="#">Liên hệ</a></li>
+        <li><a href="gioithieu.html">Giới thiệu</a></li>
+        <li><a href="lienhe.html">Liên hệ</a></li>
         <li><a href="add-product.html">Thêm sản phẩm</a></li>
       </ul>
     </div>
@@ -26,9 +25,9 @@
       <span class="welcome">
         Xin chào, <b id="username">Khách</b>
       </span>
-      <button class="btn-outline" onclick="toggleCart()">🛒 Giỏ hàng</button>
-      <button class="btn-outline" onclick="logout()">Đăng xuất</button>
+      <button class="btn-outline" onclick="toggleCart()">🛒 Giỏ hàng <span id="cartCount" style="background: red; color: white; padding: 2px 6px; border-radius: 50%; font-size: 12px; margin-left: 5px;">0</span></button>
       <button class="btn-outline" onclick="openProfile()">👤 Profile</button>
+      <button class="btn-outline" onclick="logout()">Đăng xuất</button>
     </div>
   </nav>
 </header>
@@ -112,6 +111,30 @@
     </div>
   </div>
 </div>
+  <!-- Nút chat tròn góc phải -->
+<button id="chatToggle" style="position:fixed; bottom:20px; left:20px; z-index:9999; width:60px; height:60px; border-radius:50%; background:#ff7a00; color:white; border:none; cursor:pointer; font-size:28px;"> 💬 </button>
+  <!-- Iframe Chatbase -->
+  <iframe id="chatIframe"
+          src="https://www.chatbase.co/chatbot-iframe/PijUonTGEN132p5wH9o1j"
+          style="position:fixed; bottom:90px; left:20px; width:350px; height:500px; border:0; display:none; z-index:9998; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.3);"
+
+>
+  </iframe>
+  <script>
+    let flagChatbox = false;
+//hello
+    document.getElementById('chatToggle').addEventListener('click', function() {
+      const chatbox = document.getElementById('chatIframe');
+      if(!flagChatbox){
+        chatbox.style.display = 'block';
+        flagChatbox = true;
+      } else {
+        chatbox.style.display = 'none';
+        flagChatbox = false;
+      }
+    });
+  </script>
+</body>
 <!-- FOOTER -->
 <footer class="footer">
   © 2026 ForsakenShop

@@ -3,20 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Chi tiết sản phẩm</title>
-  <script src="product-detail.js" defer></script>
-  <link rel="stylesheet" href="product-detail.css">
+  <script src="home.js" defer></script>
+  <link rel="stylesheet" href="home.css">
 </head>
 <body>
 <!-- HEADER / NAVBAR -->
 <header class="header">
   <nav class="navbar">
     <div class="nav-left">
-      <span class="logo">ForsakenShop</span>
+      <span class="logo" hrel="home.html">ForsakenShop</span>
       <ul class="nav-menu">
         <li><a href="home.html">Trang chủ</a></li>
-        <li><a href="#">Sản phẩm</a></li>
-        <li><a href="#">Giới thiệu</a></li>
-        <li><a href="#">Liên hệ</a></li>
+        <li><a href="gioithieu.html">Giới thiệu</a></li>
+        <li><a href="lienhe.html">Liên hệ</a></li>
         <li><a href="add-product.html">Thêm sản phẩm</a></li>
       </ul>
     </div>
@@ -26,18 +25,22 @@
         Xin chào, <b id="username">Khách</b>
       </span>
       <button class="btn-outline" onclick="toggleCart()">🛒 Giỏ hàng</button>
-      <button class="btn-outline" onclick="logout()">Đăng xuất</button>
       <button class="btn-outline" onclick="openProfile()">👤 Profile</button>
+      <button class="btn-outline" onclick="logout()">Đăng xuất</button>
     </div>
   </nav>
 </header>
 
-<h1 id="productName"></h1>
-<img id="productImg" width="300">
-<p id="productPrice"></p>
-<p id="productInfo"></p>
-<button id="addBtn">Thêm vào giỏ</button>
-<button onclick="history.back()">⬅ Quay lại</button>
-
+<div class="detail-container">
+    <h1 id="productName"></h1>
+    <img id="productImg" width="400">
+    <p id="productPrice"></p>
+    <p id="productInfo"></p>
+    
+    <div class="detail-buttons">
+        <button id="addBtn">Thêm vào giỏ</button>
+        <button onclick="history.back()">⬅ Quay lại</button>
+    </div>
+</div>
 </body>
 </html>

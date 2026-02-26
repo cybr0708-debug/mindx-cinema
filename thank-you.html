@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Cảm ơn bạn đã mua hàng | ForsakenShop</title>
+  <link rel="stylesheet" href="home.css">
+  <style>
+    /* CSS bổ sung để căn giữa nội dung */
+    .thank-you-wrapper {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      padding: 20px;
+    }
+
+    .thank-you-card {
+      background: #111;
+      border: 1px solid var(--primary);
+      padding: 50px;
+      border-radius: 20px;
+      text-align: center;
+      max-width: 600px;
+      box-shadow: 0 0 30px rgba(255, 165, 0, 0.1);
+    }
+
+    .icon-success {
+      font-size: 80px;
+      margin-bottom: 20px;
+      display: inline-block;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(-20px);}
+      60% {transform: translateY(-10px);}
+    }
+
+    .thank-you-card h1 {
+      color: var(--primary);
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .thank-you-card p {
+      color: #ccc;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .order-id {
+      display: inline-block;
+      padding: 8px 15px;
+      background: #222;
+      border-radius: 5px;
+      color: var(--primary);
+      font-family: monospace;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="thank-you-wrapper">
+    <div class="thank-you-card">
+      <div class="icon-success">🎉</div>
+      <h1>ĐẶT HÀNG THÀNH CÔNG!</h1>
+      <p>
+        Cảm ơn bạn đã lựa chọn <b>ForsakenShop</b>. <br>
+        Đơn hàng của bạn đã được tiếp nhận và đang trong quá trình đóng gói. 
+        Chúng tôi sẽ liên hệ với bạn qua số điện thoại để xác nhận sớm nhất.
+      </p>
+
+      <div class="order-id">
+        Mã đơn hàng: #FS<span id="randomID"></span>
+      </div>
+
+      <div style="display: flex; gap: 15px; justify-content: center;">
+        <a href="home.html" class="btn-pay" style="text-decoration: none; padding: 12px 25px;">
+          Tiếp tục mua sắm
+        </a>
+        <button class="btn-outline" onclick="window.print()" style="padding: 12px 25px;">
+          In hóa đơn
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Tạo một mã đơn hàng ngẫu nhiên cho đẹp
+    document.getElementById('randomID').innerText = Math.floor(100000 + Math.random() * 900000);
+
+    // Tự động chuyển về trang chủ sau 10 giây nếu khách không làm gì
+    setTimeout(() => {
+      // window.location.href = "home.html";
+    }, 10000);
+  </script>
+
+</body>
+</html>

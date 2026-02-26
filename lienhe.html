@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>ForsakenShop | Liên hệ</title>
+  <link rel="stylesheet" href="home.css"> <script src="home.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="logo" hrel="home.html">ForsakenShop</span>
+      <ul class="nav-menu">
+        <li><a href="home.html">Trang chủ</a></li>
+        <li><a href="gioithieu.html">Giới thiệu</a></li>
+        <li><a href="lienhe.html">Liên hệ</a></li>
+        <li><a href="add-product.html">Thêm sản phẩm</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-right">
+      <span class="welcome">
+        Xin chào, <b id="username">Khách</b>
+      </span>
+      <button class="btn-outline" onclick="toggleCart()">🛒 Giỏ hàng</button>
+      <button class="btn-outline" onclick="openProfile()">👤 Profile</button>
+      <button class="btn-outline" onclick="logout()">Đăng xuất</button>
+    </div>
+  </nav>
+</header>
+
+<main class="products" style="margin-top: 50px;">
+  <h1 style="text-align: center; color: var(--primary); margin-bottom: 40px;">LIÊN HỆ VỚI CHÚNG TÔI</h1>
+
+  <div class="products-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+    
+    <div class="product" style="cursor: default; text-align: left; padding: 30px;">
+      <h2 style="color: var(--primary); margin-bottom: 20px;">Thông Tin Shop</h2>
+      <p style="margin-bottom: 15px;">📍 <b>Địa chỉ:</b> 123 Đường Công Nghệ, Quận 1, TP. HCM</p>
+      <p style="margin-bottom: 15px;">📞 <b>Hotline:</b> <a href="tel:0901234567" style="color: var(--text); text-decoration: none;">090.123.4567</a></p>
+      <p style="margin-bottom: 15px;">📧 <b>Email:</b> hotro@forsakenshop.com</p>
+      <p style="margin-bottom: 15px;">⏰ <b>Giờ làm việc:</b> 8:00 - 21:00 (Tất cả các ngày)</p>
+      
+      <div style="margin-top: 30px; display: flex; gap: 10px;">
+        <button class="btn-outline">Facebook</button>
+        <button class="btn-outline">Instagram</button>
+        <button class="btn-outline">Zalo</button>
+      </div>
+    </div>
+
+    <div class="product" style="cursor: default; padding: 30px;">
+      <h2 style="color: var(--primary); margin-bottom: 20px;">Gửi Tin Nhắn</h2>
+      <div class="cart-checkout-form">
+        <input type="text" id="contactName" placeholder="Họ và tên của bạn">
+        <input type="email" id="contactEmail" placeholder="Địa chỉ Email">
+        <textarea id="contactMessage" placeholder="Nội dung bạn cần hỗ trợ..." style="width: 100%; height: 120px; background: var(--dark-2); color: var(--text); border: 1px solid #444; border-radius: 5px; padding: 10px; margin-top: 10px;"></textarea>
+        <button class="btn-pay" onclick="sendContact()">GỬI LIÊN HỆ</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="margin-top: 50px; border-radius: 15px; overflow: hidden; height: 350px; border: 1px solid var(--primary);">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4241674197!2d106.69918031533413!3d10.775658662098485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f4769069d13%3A0x673413665790d56c!2sSaigon%20Centre!5e0!3m2!1svi!2s!4v1625000000000!5m2!1svi!2s" 
+      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+</main>
+
+<footer class="footer" style="margin-top: 50px;">
+  © 2026 ForsakenShop - Uy tín tạo niềm tin
+</footer>
+
+<aside class="cart" id="cart">...</aside>
+<script>
+  function sendContact() {
+    const name = document.getElementById('contactName').value;
+    if(name === "") {
+      alert("Vui lòng nhập tên của bạn!");
+    } else {
+      alert("Cảm ơn " + name + "! Chúng mình đã nhận được lời nhắn và sẽ phản hồi sớm nhất.");
+      location.reload();
+    }
+  }
+</script>
+
+</body>
+</html>
