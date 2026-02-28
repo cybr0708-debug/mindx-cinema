@@ -148,7 +148,21 @@ function processCheckout() {
   localStorage.removeItem("cart");
   window.location.href = "thank-you.html";
 }
-
+function openProfile() { 
+  const overlay = document.getElementById("profileOverlay");
+  if (overlay) {
+    overlay.classList.add("active");
+    document.getElementById("profileUser").value = localStorage.getItem("currentUser") || "Khách";
+  }
+}
+function toggleProfile() {
+  document.getElementById("profileOverlay").classList.remove("active");
+  hideChangePassForm(); // Reset lại form đổi pass khi đóng
+}
+function toggleProfile() {
+  document.getElementById("profileOverlay").classList.remove("active");
+  hideChangePassForm(); // Reset lại form đổi pass khi đóng
+}
 function toggleCart() { document.getElementById("cart").classList.toggle("active"); }
 function toggleTheme() {
   document.body.classList.toggle("light");
@@ -176,3 +190,157 @@ function saveNewPass() {
     hideChangePassForm();
   }
 }
+// 1. Dữ liệu Tin tức (giống như mảng products)
+let newsList = [
+  {
+    id: "n1",
+    title: "Top 5 Laptop Gaming đáng mua nhất 2026",
+    summary: "Khám phá danh sách những mẫu laptop sở hữu card đồ họa RTX 50-series mới nhất...",
+    content: "Nội dung chi tiết bài viết về Laptop Gaming...", // Bạn có thể thêm nội dung dài ở đây
+    img: "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=500",
+    content: `
+    <p>Năm 2026 đánh dấu bước ngoặt lớn của làng Laptop Gaming với sự xuất hiện của dòng card đồ họa Blackwell thế hệ mới. Dưới đây là 5 cái tên xuất sắc nhất do ForsakenShop bình chọn:</p>
+
+    <div style="margin-bottom: 25px;">
+      <h3 style="color: var(--primary);">1. ROG Zephyrus G16 (2026 Edition)</h3>
+      <p><b>Thông số:</b> RTX 5070, Intel Core Ultra 9, RAM 32GB LPDDR5X.</p>
+      <p>Vẫn giữ ngôi vương về thiết kế sang trọng, Zephyrus G16 năm nay mỏng hơn nhưng lại mát hơn nhờ hệ thống tản nhiệt buồng hơi (Vapor Chamber) cải tiến.</p>
+    </div>
+
+    <div style="margin-bottom: 25px;">
+      <h3 style="color: var(--primary);">2. MSI Raider GE78 HX</h3>
+      <p><b>Thông số:</b> RTX 5090 (175W), i9-16900HX, Màn hình 4K 144Hz.</p>
+      <p>Nếu bạn cần sức mạnh tuyệt đối để thay thế máy bàn, đây là lựa chọn số 1. Dải đèn LED Matrix đặc trưng giờ đây đã có thêm nhiều hiệu ứng đồng bộ theo âm thanh game.</p>
+    </div>
+
+    <div style="margin-bottom: 25px;">
+      <h3 style="color: var(--primary);">3. Razer Blade 14</h3>
+      <p><b>Thông số:</b> RTX 5060, Ryzen 9 9000 Series, Màn OLED 240Hz.</p>
+      <p>Định nghĩa của "Nhỏ nhưng có võ". Razer Blade 14 vẫn là chiếc laptop gaming 14 inch mạnh nhất thế giới với bộ khung nhôm nguyên khối bền bỉ.</p>
+    </div>
+
+    <div style="margin-bottom: 25px;">
+      <h3 style="color: var(--primary);">4. Acer Predator Helios Neo 16</h3>
+      <p><b>Thông số:</b> RTX 5050 Ti, i7-15700HX, RAM 16GB.</p>
+      <p>Đây là "ông vua" phân khúc tầm trung. Với mức giá dễ tiếp cận nhưng hiệu năng lại vượt xa mong đợi, phù hợp cho học sinh, sinh viên chiến game AAA.</p>
+    </div>
+
+    <div style="margin-bottom: 25px;">
+      <h3 style="color: var(--primary);">5. Lenovo Legion Slim 5</h3>
+      <p><b>Thông số:</b> RTX 5060, Ryzen 7, Màn hình 165Hz 100% sRGB.</p>
+      <p>Sự cân bằng hoàn hảo giữa làm việc và giải trí. Bàn phím Legion TrueStrike vẫn đem lại cảm giác gõ tốt nhất trong phân khúc laptop gaming hiện nay.</p>
+    </div>
+
+    <p style="border-top: 1px dashed #444; padding-top: 15px; font-style: italic;">
+      Tất cả các sản phẩm trên đều đang sẵn hàng tại <b>ForsakenShop</b> với ưu đãi tặng kèm Balo và Chuột Gaming cao cấp!
+    </p>
+  `,
+    date: "27/02/2026"
+  },
+  {
+    id: "n2",
+    title: "Mẹo tối ưu RAM cho máy 4GB",
+    summary: "Làm thế nào để Windows chỉ tốn 2.5GB RAM thay vì 3.2GB? Xem ngay...",
+    content: "Các bước tắt OneDrive, SysMain và Windows Search...",
+    img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500",
+    content: `
+    <p>Sở hữu một chiếc máy tính có RAM 4GB (thực dùng khoảng 3.2GB - 3.4GB) là một thử thách lớn khi chạy các ứng dụng hiện đại. Dưới đây là các bước tối ưu hóa chuyên sâu mà ForsakenShop đã áp dụng thành công:</p>
+    
+    <h3 style="color: var(--primary); margin: 20px 0 10px;">1. Tắt các dịch vụ "hút" RAM ngầm</h3>
+    <p>Windows có những dịch vụ chạy ngầm đôi khi không cần thiết đối với người dùng phổ thông:</p>
+    <ul>
+      <li><b>SysMain (Superfetch):</b> Dịch vụ này giúp tải trước ứng dụng nhưng lại chiếm dụng RAM và làm ổ cứng luôn ở mức 100%. Hãy vào <i>Services.msc</i>, tìm SysMain và chuyển sang <b>Disabled</b>.</li>
+      <li><b>Connected User Experiences and Telemetry:</b> Đây là dịch vụ thu thập dữ liệu gửi về Microsoft. Tắt nó đi sẽ giúp máy nhẹ hơn rõ rệt.</li>
+    </ul>
+
+    <h3 style="color: var(--primary); margin: 20px 0 10px;">2. Dọn dẹp Task Manager</h3>
+    <p>Hãy nhấn <b>Ctrl + Shift + Esc</b> và chuyển sang tab <i>Startup</i>. Vô hiệu hóa (Disable) tất cả các ứng dụng không cần thiết khi khởi động máy như:</p>
+    <ul>
+      <li>Microsoft Teams / OneDrive.</li>
+      <li>Cortana và Windows Search (nếu bạn ít dùng thanh tìm kiếm).</li>
+      <li>Các phần mềm hỗ trợ từ hãng máy tính.</li>
+    </ul>
+
+    <h3 style="color: var(--primary); margin: 20px 0 10px;">3. Tối ưu hóa trình duyệt Web</h3>
+    <p>Trình duyệt là "kẻ sát nhân" RAM số 1. Hãy sử dụng các extension như <b>The Great Suspender</b> để tạm dừng các tab không dùng đến. Ngoài ra, hãy ưu tiên dùng Microsoft Edge vì nó có tính năng <i>Sleeping Tabs</i> rất tốt cho máy RAM yếu.</p>
+
+    <div style="background: #222; padding: 15px; border-left: 5px solid var(--primary); margin-top: 20px;">
+      <i><b>Lời khuyên từ Admin:</b> Nếu có điều kiện, việc nâng cấp thêm 1 thanh RAM 4GB nữa (lên tổng 8GB) sẽ là giải pháp triệt để nhất để trải nghiệm đa nhiệm mượt mà!</i>
+    </div>
+  `,
+    date: "25/02/2026"
+  }
+];
+
+// 2. Hàm render Tin tức ra trang news.html
+function renderNews() {
+  const newsGrid = document.getElementById("newsGrid");
+  if (!newsGrid) return; // Nếu không phải trang news thì thoát
+
+  newsGrid.innerHTML = "";
+  newsList.forEach(item => {
+    newsGrid.innerHTML += `
+      <article class="product">
+        <div class="product-img">
+          <img src="${item.img}" style="object-fit: cover; height: 180px;">
+          <div class="img-overlay" onclick="viewNewsDetail('${item.id}')">Đọc thêm</div>
+        </div>
+        <h3 style="margin-top: 10px;">${item.title}</h3>
+        <p style="color: var(--muted); font-size: 13px; font-weight: normal;">${item.summary}</p>
+        <span style="font-size: 11px; color: var(--primary);">${item.date}</span>
+        <button onclick="viewNewsDetail('${item.id}')" style="margin-top:10px;">Xem chi tiết</button>
+      </article>
+    `;
+  });
+}
+
+// 3. Hàm xử lý khi bấm xem chi tiết (có thể dùng alert hoặc lưu vào localStorage)
+function viewNewsDetail(id) {
+  const item = newsList.find(n => n.id === id);
+  if (item) {
+    // Để đơn giản và nhẹ RAM, ta dùng alert hoặc hiển thị vào 1 cái Modal giống Profile
+    alert("Đang mở bài viết: " + item.title + "\n(Tính năng này bạn có thể làm trang news-detail.html tương tự product-detail)");
+  }
+}
+
+// 4. Cập nhật hàm chạy khi load trang
+document.addEventListener("DOMContentLoaded", () => {
+  // ... các code cũ của bạn ...
+  if (document.getElementById("newsGrid")) {
+    renderNews();
+  }
+});
+// 1. Hàm này chạy khi bấm nút ở trang news.html
+function viewNewsDetail(id) {
+  const item = newsList.find(n => n.id === id);
+  if (item) {
+    localStorage.setItem("currentNews", JSON.stringify(item)); // Lưu bài báo vào bộ nhớ
+    window.location.href = "news-detail.html"; // Chuyển trang
+  }
+}
+
+// 2. Hàm này chạy khi trang news-detail.html vừa load xong
+function initNewsDetail() {
+  const titleEl = document.getElementById("newsTitle");
+  if (!titleEl) return; // Nếu không phải trang detail thì dừng
+
+  const news = JSON.parse(localStorage.getItem("currentNews"));
+  if (!news) return;
+
+  // Đổ dữ liệu vào HTML
+  titleEl.innerText = news.title;
+  document.getElementById("newsDate").innerText = "Ngày đăng: " + news.date;
+  document.getElementById("newsImg").src = news.img;
+  
+  // news.content có thể chứa HTML nếu bạn muốn bài viết có định dạng
+  document.getElementById("newsContent").innerHTML = news.content;
+}
+
+// 3. Cập nhật DOMContentLoaded để gọi hàm initNewsDetail
+document.addEventListener("DOMContentLoaded", () => {
+    // ... các code cũ của bạn ...
+    
+    if (document.getElementById("newsGrid")) renderNews();
+    
+    if (document.getElementById("newsTitle")) initNewsDetail(); // Thêm dòng này
+});

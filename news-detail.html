@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi tiết tin tức | ForsakenShop</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-left">
+        <span class="logo">ForsakenShop</span>
+        <ul class="nav-menu">
+          <li><a href="home.html">Trang chủ</a></li>
+          <li><a href="news.html" style="color: var(--primary);">Tin tức</a></li>
+          <li><a href="gioithieu.html">Giới thiệu</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <button class="btn-outline" onclick="history.back()">🔙 Quay lại</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="detail-container">
+    <h1 id="newsTitle" style="color: var(--primary); margin-bottom: 20px;"></h1>
+    <p id="newsDate" style="color: var(--muted); font-size: 14px; margin-bottom: 20px;"></p>
+    
+    <img id="newsImg" src="" style="max-width: 800px; width: 100%; border-radius: 15px; margin-bottom: 30px;">
+    
+    <div id="newsContent" style="max-width: 800px; text-align: left; line-height: 1.8; color: #ccc; font-size: 18px;">
+      </div>
+  </main>
+
+  <footer class="footer">
+    © 2026 ForsakenShop
+    © 2026 ForsakenShop | <a href="policy.html" style="color: #666; text-decoration: none;">Chính sách cửa hàng</a>
+  </footer>
+
+  <script src="home.js"></script>
+</body>
+</html>

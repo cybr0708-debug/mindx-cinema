@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chính sách | ForsakenShop</title>
+  <link rel="stylesheet" href="home.css">
+  <style>
+    /* CSS bổ sung riêng cho trang chính sách */
+    .policy-item {
+      background: var(--dark-2);
+      margin-bottom: 15px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid #333;
+    }
+    .policy-header {
+      padding: 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      transition: var(--transition);
+    }
+    .policy-header:hover { background: #252525; color: var(--primary); }
+    
+    .policy-content {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      color: #ccc;
+      line-height: 1.6;
+    }
+    .policy-item.active .policy-content {
+      padding: 20px;
+      max-height: 500px; /* Độ cao tối đa khi mở */
+      border-top: 1px solid #333;
+    }
+    .policy-item.active .policy-header { color: var(--primary); }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="logo">ForsakenShop</span>
+      <ul class="nav-menu">
+        <li><a href="home.html">Trang chủ</a></li>
+        <li><a href="news.html">Tin tức</a></li>
+        <li><a href="chinhsach.html" style="color: var(--primary);">Chính sách</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <button class="btn-outline" onclick="history.back()">🔙 Quay lại</button>
+    </div>
+  </nav>
+</header>
+
+<main class="products" style="padding-top: 50px; min-height: 80vh;">
+  <h1 style="text-align: center; margin-bottom: 40px; color: var(--primary);">CHÍNH SÁCH CỬA HÀNG</h1>
+
+  <div style="max-width: 800px; margin: auto;">
+    <div class="policy-item">
+      <div class="policy-header" onclick="togglePolicy(this)">
+        1. Chính sách bảo hành <span>+</span>
+      </div>
+      <div class="policy-content">
+        <p>- Tất cả Laptop tại ForsakenShop được bảo hành 12-24 tháng tùy dòng máy.<br>
+           - Đổi mới trong 7 ngày đầu nếu có lỗi phần cứng từ nhà sản xuất.<br>
+           - Hỗ trợ vệ sinh máy và cài đặt phần mềm trọn đời.</p>
+      </div>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-header" onclick="togglePolicy(this)">
+        2. Chính sách vận chuyển <span>+</span>
+      </div>
+      <div class="policy-content">
+        <p>- Miễn phí vận chuyển toàn quốc cho đơn hàng trên 10.000.000đ.<br>
+           - Giao hàng hỏa tốc trong 2h tại nội thành Hà Nội.<br>
+           - Khách hàng được kiểm tra hàng (đồng kiểm) trước khi thanh toán.</p>
+      </div>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-header" onclick="togglePolicy(this)">
+        3. Chính sách bảo mật thông tin <span>+</span>
+      </div>
+      <div class="policy-content">
+        <p>- ForsakenShop cam kết bảo mật tuyệt đối thông tin cá nhân và số điện thoại của khách hàng.<br>
+           - Thông tin chỉ được dùng để liên hệ giao hàng và bảo hành sản phẩm.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  © 2026 ForsakenShop - Uy tín tạo niềm tin
+  © 2026 ForsakenShop | <a href="policy.html" style="color: #666; text-decoration: none;">Chính sách cửa hàng</a>
+</footer>
+
+<script>
+  function togglePolicy(header) {
+    const item = header.parentElement;
+    item.classList.toggle('active');
+    
+    // Đổi dấu + thành -
+    const span = header.querySelector('span');
+    span.innerText = item.classList.contains('active') ? '−' : '+';
+  }
+</script>
+</body>
+</html>
