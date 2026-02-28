@@ -1,8 +1,12 @@
 let products = JSON.parse(localStorage.getItem("products")) || [
-  { id: "p1", name: "Laptop Gaming", price: 25000000, category: "gaming", info: "Laptop gaming hiệu năng cao, thiết kế hầm hố, màn hình 144Hz, RGB, tản nhiệt tốt.", img: "https://i.postimg.cc/8kH2R25r/OIP.webp" },
+  { id: "p1", name: "Lenovo Legion Slim 5", price: 25000000, category: "gaming", info: "Laptop gaming cân bằng giữa làm việc và giải trí, bàn phím Legion TrueStrike.", img: "https://i.postimg.cc/Tw1WjJmh/OIP.webp" },
   { id: "p2", name: "Chuột Gaming", price: 350000, category: "phukien", info: "Chuột gaming có dây, cảm biến chính xác, nhiều nút bấm tùy chỉnh, đèn RGB.", img: "https://i.postimg.cc/fbD7frkK/OIP.webp" },
   { id: "p3", name: "Bàn phím cơ", price: 1200000, category: "phukien", info: "Bàn phím cơ switch đỏ, thiết kế đẹp, đèn RGB, chống nước, phù hợp chơi game và gõ phím.", img: "https://i.postimg.cc/B6y1kYZg/BP-1-2048x1010.jpg" },
-  { id: "p4", name: "Tai nghe gaming", price: 1200000, category: "phukien", info: "Tai nghe gaming có dây, âm thanh ảo 7.1, đèn RGB, phù hợp chơi game và nghe nhạc.", img: "https://i.postimg.cc/h4rMpYqk/OIP.webp" }
+  { id: "p4", name: "Tai nghe gaming", price: 1200000, category: "phukien", info: "Tai nghe gaming có dây, âm thanh ảo 7.1, đèn RGB, phù hợp chơi game và nghe nhạc.", img: "https://i.postimg.cc/h4rMpYqk/OIP.webp" },
+  { id: "p5", name: "ROG Zephyrus G16", price: 3500000, category: "gaming", info: "Laptop gaming cao cấp, hiệu năng mạnh mẽ, màn hình 16 inch, thiết kế tối giản.", img: "https://i.postimg.cc/Gp5pRw82/download.webp" },
+  { id: "p6", name: "MSI Raider GE78 HX", price: 45000000, category: "gaming", info: "Laptop gaming hiệu năng cực cao, cấu hình mạnh mẽ nhất hiện nay, thiết kế độc đáo.", img: "https://i.postimg.cc/3Jm9D3YL/download.webp" },
+  { id: "p7", name: "Razer Blade 14", price: 40000000, category: "gaming", info: "Laptop gaming 14 inch mạnh nhất thế giới, thiết kế nhôm nguyên khối.", img: "https://i.postimg.cc/yYycHxVx/OIP.webp" },
+  { id: "p8", name: "Acer Predator Helios Neo 16", price: 20000000, category: "gaming", info: "Laptop gaming tầm trung, hiệu năng vượt trội, giá cả phải chăng.", img: "https://i.postimg.cc/G24x3CMR/download.webp" },
 ];
 localStorage.setItem("products", JSON.stringify(products));
 
