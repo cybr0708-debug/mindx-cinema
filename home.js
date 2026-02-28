@@ -269,7 +269,102 @@ content: `
     </div>
   `,
     date: "25/02/2026"
-  }
+  },
+  {
+    id: "n3",
+    title: "Hướng dẫn Build PC Gaming tối ưu hiệu năng trên từng đồng xu (Cập nhật 2026)",
+    summary: "Bạn đang phân vân giữa Intel và AMD? Card đồ họa nào là 'vừa đủ'? Bài viết này sẽ giúp bạn làm chủ mọi linh kiện...",
+    img: "https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=800",
+    date: "28/02/2026",
+    content: `
+        <p>Build một chiếc PC không chỉ là cắm các linh kiện vào nhau, đó là một nghệ thuật cân bằng giữa túi tiền và sức mạnh. Trong năm 2026, với sự ra đời của RAM DDR6 và các dòng CPU tiến trình 2nm, việc lựa chọn càng trở nên khó khăn hơn.</p>
+
+        <h3 style="color: var(--primary); margin-top: 20px;">1. Lựa chọn CPU: Trái tim của hệ thống</h3>
+        <p>Hiện nay, <b>Core i5-16400F</b> và <b>Ryzen 5 9600X</b> đang là hai đối thủ truyền kiếp ở phân khúc tầm trung. Nếu bạn thuần chơi game, Ryzen 5 với bộ nhớ đệm L3 cực lớn sẽ cho mức FPS ổn định hơn. Ngược lại, nếu bạn vừa chơi game vừa làm sáng tạo nội dung (Edit video, Stream), Intel với kiến trúc nhân hỗn hợp (P-core và E-core) vẫn chiếm ưu thế tuyệt đối.</p>
+
+        <h3 style="color: var(--primary); margin-top: 20px;">2. GPU - Card đồ họa: Đừng dồn hết tiền vào đây!</h3>
+        <p>Lỗi phổ biến nhất của người mới là mua một cái card quá mạnh nhưng lại dùng màn hình quá 'cùi'.</p>
+        <ul style="color: #ccc; line-height: 1.8;">
+            <li><b>Chơi game Full HD:</b> RTX 5050 là quá đủ để chiến mọi game AAA.</li>
+            <li><b>Chơi game 2K:</b> RTX 5070 hoặc RX 8800 XT là sự lựa chọn hoàn hảo.</li>
+            <li><b>Làm đồ họa chuyên nghiệp:</b> Hãy cân nhắc dòng RTX Workstation với dung lượng VRAM lớn.</li>
+        </ul>
+
+        <h3 style="color: var(--primary); margin-top: 20px;">3. Bộ lưu trữ: Tạm biệt HDD</h3>
+        <p>Năm 2026, ForsakenShop chính thức ngừng tư vấn lắp đặt HDD cho hệ điều hành. Hãy sử dụng ít nhất một ổ <b>SSD NVMe Gen 5</b>. Tốc độ đọc lên tới 10,000MB/s sẽ giúp bạn vào trận game chỉ trong chưa đầy 3 giây.</p>
+
+        <div style="background: #222; padding: 20px; border-radius: 8px; margin-top: 20px;">
+            <p style="color: gold; font-weight: bold;">💡 Mẹo từ chuyên gia ForsakenShop:</p>
+            <p>Đừng bao giờ tiết kiệm tiền mua Bộ nguồn (PSU). Một bộ nguồn kém chất lượng có thể 'nướng chín' toàn bộ dàn linh kiện đắt tiền của bạn bất cứ lúc nào.</p>
+        </div>
+    `
+},
+{
+    id: "n4",
+    title: "Review Chi Tiết Bộ PC Forsaken 'Infinity': Sức mạnh hủy diệt năm 2026",
+    summary: "Năm 2026, ForsakenShop chính thức ra mắt quái vật hiệu năng 'Infinity' - một bộ PC Gaming hội tụ những công nghệ tiên tiến nhất...",
+    img: "https://i.postimg.cc/tTT3gj4h/Phoenix-Teal-RTX-5090-1-600x600-jpg.webp",
+    date: "28/02/2026",
+    content: `
+        <p>Thế giới PC Gaming năm 2026 đang chứng kiến sự ra đời của một kỷ nguyên mới, nơi sức mạnh tính toán và khả năng xử lý AI đã đạt đến những đỉnh cao chưa từng có. Tại ForsakenShop, chúng tôi hãnh diện giới thiệu 'Infinity' - một bộ PC Gaming không chỉ mạnh mà còn là một tác phẩm nghệ thuật, định nghĩa lại khái niệm 'Hiệu năng đỉnh cao'.</p>
+
+        <h3 style="color: var(--primary); margin-top: 25px;">1. Tầm nhìn: 'Infinity' - Khởi đầu cho tương lai</h3>
+        <p>'Infinity' không chỉ là sự kết hợp của những linh kiện đắt tiền nhất. Nó là kết quả của hàng ngàn giờ nghiên cứu và phát triển, nơi chúng tôi tập trung vào việc tối ưu hóa hiệu năng trên từng đồng xu, đảm bảo sự ổn định tuyệt đối và mang đến một trải nghiệm chơi game 'mượt mà như lụa'. Tầm nhìn của chúng tôi là tạo ra một bộ PC không bao giờ 'lỗi thời', một người bạn đồng hành tin cậy cho mọi game thủ chuyên nghiệp.</p>
+        
+        <p>Với 'Infinity', bạn sẽ không còn phải lo lắng về mức FPS, độ phân giải hay những hiện tượng giật lag khó chịu. Nó là chìa khóa mở ra cánh cửa dẫn đến những thế giới game rộng lớn, nơi bạn có thể khám phá mọi chi tiết nhỏ nhất với chất lượng hiển thị tuyệt vời nhất.</p>
+        
+        <h3 style="color: var(--primary); margin-top: 25px;">2. Cấu hình Chi tiết: Sức mạnh hủy diệt</h3>
+        <p>Mỗi linh kiện bên trong 'Infinity' đều được lựa chọn kỹ lưỡng, đảm bảo khả năng phối hợp tối ưu và tạo ra một sức mạnh tổng hợp đáng kinh ngạc. Dưới đây là cấu hình chi tiết:</p>
+        <ul style="color: #ccc; line-height: 1.8;">
+            <li><b>CPU:</b> Core i9-16900KF với 128 nhân, xung nhịp 7.5GHz. Đây là con 'quái vật' thực sự, có thể xử lý mọi tác vụ nặng nhất một cách dễ dàng.</li>
+            <li><b>GPU:</b> RTX 5090 với 32GB VRAM GDDR7. Trải nghiệm game 8K 144Hz không còn là mơ ước.</li>
+            <li><b>RAM:</b> 128GB DDR6 Bus 12000MHz. Khả năng đa nhiệm chưa từng có, bạn có thể vừa chơi game vừa render video mà không gặp bất kỳ trở ngại nào.</li>
+            <li><b>SSD:</b> 10TB NVMe Gen 6 với tốc độ đọc/ghi lên tới 25GB/s. Tải game chỉ trong chưa đầy 1 giây.</li>
+            <li><b>Tản nhiệt:</b> Hệ thống tản nhiệt nước Custom đa buồng hơi, đảm bảo CPU và GPU luôn 'mát như băng'.</li>
+            <li><b>PSU:</b> 2000W 80 Plus Platinum. Cung cấp một nguồn điện dồi dào và ổn định cho hệ thống.</li>
+        </ul>
+
+        <h3 style="color: var(--primary); margin-top: 25px;">3. Hiệu năng Thực tế: Game AAA mượt mà</h3>
+        <p>Chúng tôi đã tiến hành các bài test hiệu năng thực tế với những tựa game AAA nặng nhất hiện nay. Kết quả thu được thật kinh ngạc, chứng minh sức mạnh hủy diệt của 'Infinity'. Dưới đây là bảng Benchmark:</p>
+        <div style="margin: 20px 0; border: 1px solid #444; border-radius: 8px; overflow: hidden;">
+            <table style="width: 100%; border-collapse: collapse; background: #1a1a1a;">
+                <tr style="background: #333;">
+                    <th style="padding: 12px; text-align: left;">Tựa Game</th>
+                    <th style="padding: 12px; text-align: center;">Độ phân giải</th>
+                    <th style="padding: 12px; text-align: center;">Mức FPS trung bình</th>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border-bottom: 1px solid #333;">Cyberpunk 2077 (Ray Tracing Max)</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #333; text-align: center;">8K</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #333; text-align: center; color: #00ff00;">120 FPS</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border-bottom: 1px solid #333;">GTA VI (Online Ultra)</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #333; text-align: center;">8K</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #333; text-align: center; color: #00ff00;">144 FPS</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px;">Call of Duty 2026 (Max FPS Mode)</td>
+                    <td style="padding: 12px; text-align: center;">8K</td>
+                    <td style="padding: 12px; text-align: center; color: #00ff00;">240 FPS</td>
+                </tr>
+            </table>
+        </div>
+        
+        <h3 style="color: var(--primary); margin-top: 25px;">4. Đánh giá: Không chỉ mạnh, mà còn 'thông minh'</h3>
+        <p>Thành công của 'Infinity' không chỉ nằm ở sức mạnh phần cứng. Hệ thống tích hợp trí tuệ nhân tạo (AI) giúp tối ưu hóa hiệu năng theo thời gian thực, đảm bảo sự ổn định tuyệt đối và mang đến một trải nghiệm chơi game mượt mà nhất. AI sẽ tự động phân tích hành vi của bạn, điều chỉnh độ nhạy của chuột và tai nghe, thậm chí là dự đoán những tình huống bất ngờ trong game để giúp bạn có một lợi thế cạnh tranh.</p>
+        
+        <p>Tại ForsakenShop, chúng tôi hiểu rằng một góc Setup đẹp là một góc Setup không thấy dây điện. 'Infinity' được thiết kế với hệ thống Cable Management thông minh, giúp mặt bàn của bạn sạch bong, chỉ còn lại chuột, phím và màn hình. Bên cạnh đó, dải đèn LED Smart RGB tích hợp có khả năng đồng bộ theo màu sắc hiển thị trên màn hình, biến căn phòng của bạn thành một không gian Cyberpunk đúng nghĩa.</p>
+        
+        <h3 style="color: var(--primary); margin-top: 25px;">Kết luận: 'Infinity' - Đỉnh cao của PC Gaming</h3>
+        <p>'Infinity' là một bộ PC Gaming tuyệt vời, hội tụ những công nghệ tiên tiến nhất năm 2026. Với sức mạnh hủy diệt, khả năng xử lý AI thông minh và thiết kế đẳng cấp, nó là sự lựa chọn hoàn hảo cho mọi game thủ chuyên nghiệp.</p>
+        
+        <div style="background: rgba(255,107,0,0.1); padding: 15px; border-left: 4px solid var(--primary); margin-top: 20px;">
+            <p style="color: gold; font-weight: bold;">💡 Lời khuyên từ chuyên gia:</p>
+            <p>Để tận dụng tối đa sức mạnh của 'Infinity', hãy sử dụng màn hình QD-OLED Gen 4.0 với tốc độ phản hồi 0.01ms. Bạn sẽ phải cuộn chuột mỏi tay để khám phá mọi chi tiết trong bài báo này, tạo cảm giác website của bạn cực kỳ đầu tư về nội dung.</p>
+        </div>
+    `
+},
 ];
 
 // 2. Hàm render Tin tức ra trang news.html
@@ -279,18 +374,30 @@ function renderNews() {
 
   newsGrid.innerHTML = "";
   newsList.forEach(item => {
-    newsGrid.innerHTML += `
-      <article class="product">
+newsGrid.innerHTML += `
+    <article class="product" style="display: flex; flex-direction: column; height: 100%;">
         <div class="product-img">
-          <img src="${item.img}" style="object-fit: cover; height: 180px;">
-          <div class="img-overlay" onclick="viewNewsDetail('${item.id}')">Đọc thêm</div>
+            <img src="${item.img}" style="object-fit: cover; height: 180px; width: 100%;">
+            <div class="img-overlay" onclick="viewNewsDetail('${item.id}')">Đọc thêm</div>
         </div>
-        <h3 style="margin-top: 10px;">${item.title}</h3>
-        <p style="color: var(--muted); font-size: 13px; font-weight: normal;">${item.summary}</p>
-        <span style="font-size: 11px; color: var(--primary);">${item.date}</span>
-        <button onclick="viewNewsDetail('${item.id}')" style="margin-top:10px;">Xem chi tiết</button>
-      </article>
-    `;
+        
+        <div class="product-info" style="flex-grow: 1; display: flex; flex-direction: column;">
+            <h3 style="margin-top: 10px; min-height: 44px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                ${item.title}
+            </h3>
+            <p style="color: var(--muted); font-size: 13px; font-weight: normal; flex-grow: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 10px;">
+                ${item.summary}
+            </p>
+            <span style="font-size: 11px; color: var(--primary); display: block; margin-bottom: 10px;">
+                ${item.date}
+            </span>
+        </div>
+
+        <button onclick="viewNewsDetail('${item.id}')" style="margin-top: auto; width: 100%;">
+            Xem chi tiết
+        </button>
+    </article>
+`;
   });
 }
 

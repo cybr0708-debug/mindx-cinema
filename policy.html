@@ -7,9 +7,9 @@
   <style>
     /* CSS bổ sung riêng cho trang chính sách */
     .policy-item {
-      background: var(--dark-2);
+      background: var(--dark-2, #1a1a1a); /* Dự phòng nếu biến chưa load */
       margin-bottom: 15px;
-      border-radius: var(--radius);
+      border-radius: var(--radius, 8px);
       overflow: hidden;
       border: 1px solid #333;
     }
@@ -20,24 +20,28 @@
       justify-content: space-between;
       align-items: center;
       font-weight: bold;
-      transition: var(--transition);
+      transition: var(--transition, 0.3s);
+      user-select: none;
     }
-    .policy-header:hover { background: #252525; color: var(--primary); }
+    .policy-header:hover { background: #252525; color: var(--primary, #00ffcc); }
     
     .policy-content {
       padding: 0 20px;
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.3s ease-out;
+      transition: all 0.3s ease-out;
       color: #ccc;
-      line-height: 1.6;
+      line-height: 1.8;
     }
     .policy-item.active .policy-content {
       padding: 20px;
-      max-height: 500px; /* Độ cao tối đa khi mở */
+      max-height: 1000px; /* Tăng để chứa đủ nội dung dài */
       border-top: 1px solid #333;
     }
-    .policy-item.active .policy-header { color: var(--primary); }
+    .policy-item.active .policy-header { color: var(--primary, #00ffcc); }
+    
+    .policy-content ul { padding-left: 20px; margin: 10px 0; }
+    .policy-content strong { color: #fff; }
   </style>
 </head>
 <body>
@@ -45,7 +49,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="nav-left">
-      <span class="logo" hrel="home.html">ForsakenShop</span>
+      <span class="logo" style="cursor:pointer" onclick="window.location.href='home.html'">ForsakenShop</span>
       <ul class="nav-menu">
         <li><a href="home.html">Trang chủ</a></li>
         <li><a href="tintuc.html">Tin tức</a></li>
@@ -60,54 +64,116 @@
   </nav>
 </header>
 
-<main class="products" style="padding-top: 50px; min-height: 80vh;">
-  <h1 style="text-align: center; margin-bottom: 40px; color: var(--primary);">CHÍNH SÁCH CỬA HÀNG</h1>
+<main class="products" style="padding-top: 80px; padding-bottom: 50px; min-height: 80vh;">
+  <h1 style="text-align: center; margin-bottom: 40px; color: var(--primary, #00ffcc); font-size: 2.5rem;">CHÍNH SÁCH CỬA HÀNG</h1>
 
-  <div style="max-width: 800px; margin: auto;">
+  <div style="max-width: 900px; margin: auto; padding: 0 20px;">
+    
     <div class="policy-item">
       <div class="policy-header" onclick="togglePolicy(this)">
-        1. Chính sách bảo hành <span>+</span>
+        1. Chính sách bảo hành & Sửa chữa <span>+</span>
       </div>
       <div class="policy-content">
-        <p>- Tất cả Laptop tại ForsakenShop được bảo hành 12-24 tháng tùy dòng máy.<br>
-           - Đổi mới trong 7 ngày đầu nếu có lỗi phần cứng từ nhà sản xuất.<br>
-           - Hỗ trợ vệ sinh máy và cài đặt phần mềm trọn đời.</p>
+        <p>- <strong>Linh kiện mới:</strong> Bảo hành theo tiêu chuẩn nhà sản xuất (thường 24-36 tháng).<br>
+           - <strong>Linh kiện cũ/Like new:</strong> Bảo hành 06-12 tháng tại cửa hàng.<br>
+           - <strong>Đặc quyền:</strong> Miễn phí vệ sinh, tra keo tản nhiệt MX-4/Kryonaut trọn đời máy.<br>
+           - <em>Lưu ý:</em> Không bảo hành các trường hợp cháy nổ, rơi vỡ, hoặc mất tem niêm phong.</p>
       </div>
     </div>
 
     <div class="policy-item">
       <div class="policy-header" onclick="togglePolicy(this)">
-        2. Chính sách vận chuyển <span>+</span>
+        2. Chính sách đổi trả & Hoàn tiền <span>+</span>
       </div>
       <div class="policy-content">
-        <p>- Miễn phí vận chuyển toàn quốc cho đơn hàng trên 10.000.000đ.<br>
-           - Giao hàng hỏa tốc trong 2h tại nội thành Hà Nội.<br>
-           - Khách hàng được kiểm tra hàng (đồng kiểm) trước khi thanh toán.</p>
+        <p>- <strong>7 ngày đầu:</strong> Lỗi là đổi mới (1 đổi 1) cùng cấu hình, không mất phí.<br>
+           - <strong>Sản phẩm không lỗi:</strong> Thu mua lại với mức phí 15-20% giá trị hóa đơn trong 15 ngày đầu.<br>
+           - <strong>Điều kiện:</strong> Sản phẩm còn nguyên hộp, đầy đủ phụ kiện và không có dấu hiệu trầy xước vật lý.</p>
       </div>
     </div>
 
     <div class="policy-item">
       <div class="policy-header" onclick="togglePolicy(this)">
-        3. Chính sách bảo mật thông tin <span>+</span>
+        3. Chính sách vận chuyển & Đồng kiểm <span>+</span>
       </div>
       <div class="policy-content">
-        <p>- ForsakenShop cam kết bảo mật tuyệt đối thông tin cá nhân và số điện thoại của khách hàng.<br>
-           - Thông tin chỉ được dùng để liên hệ giao hàng và bảo hành sản phẩm.</p>
+        <p>- <strong>Miễn phí ship:</strong> Áp dụng cho đơn hàng PC build hoặc đơn linh kiện trên 10 triệu.<br>
+           - <strong>Hỏa tốc 2h:</strong> Áp dụng nội thành cho đơn hàng đặt trước 16h hàng ngày.<br>
+           - <strong>Đồng kiểm:</strong> Khách hàng bắt buộc quay video khui hàng. Được kiểm tra ngoại quan sản phẩm trước khi thanh toán cho shipper.</p>
       </div>
     </div>
+
+    <div class="policy-item">
+      <div class="policy-header" onclick="togglePolicy(this)">
+        4. Chính sách bảo mật thông tin <span>+</span>
+      </div>
+      <div class="policy-content">
+        <p>- ForsakenShop cam kết 100% không cung cấp thông tin khách hàng cho bên thứ ba.<br>
+           - Dữ liệu (SĐT, Địa chỉ) chỉ dùng để tra cứu bảo hành điện tử và thông báo ưu đãi nội bộ.</p>
+      </div>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-header" onclick="togglePolicy(this)">
+        5. Chính sách thanh toán & Trả góp 0% <span>+</span>
+      </div>
+      <div class="policy-content">
+        <p>- Chấp nhận: Tiền mặt, Chuyển khoản, Quẹt thẻ (Visa/Master), Ví điện tử.<br>
+           - <strong>Trả góp:</strong> Hỗ trợ qua thẻ tín dụng (0% lãi suất) hoặc qua CCCD (xét duyệt 15 phút).<br>
+           - Giảm thêm 1% khi thanh toán chuyển khoản toàn bộ đơn hàng.</p>
+      </div>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-header" onclick="togglePolicy(this)">
+        6. Giải quyết khiếu nại & Kiểm hàng <span>+</span>
+      </div>
+      <div class="policy-content">
+        <p>- Mọi khiếu nại về thiếu hụt linh kiện hoặc trầy xước phải được phản hồi trong 24h kể từ khi nhận hàng.<br>
+           - ForsakenShop sẽ phản hồi và đưa ra phương án xử lý trong vòng tối đa 2 giờ làm việc.</p>
+      </div>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-header" onclick="togglePolicy(this)">
+        7. Điều khoản sử dụng dịch vụ <span>+</span>
+      </div>
+      <div class="policy-content">
+        <p>- Khách hàng cần cung cấp thông tin chính xác khi đặt hàng để đảm bảo quyền lợi bảo hành.<br>
+           - Nghiêm cấm sử dụng hình ảnh của ForsakenShop cho mục đích lừa đảo hoặc thương mại cá nhân.</p>
+      </div>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-header" onclick="togglePolicy(this)">
+        8. Chính sách khách hàng thân thiết (VIP) <span>+</span>
+      </div>
+      <div class="policy-content">
+        <p>- <strong>Hạng Bạc:</strong> Giảm 100k cho đơn hàng tiếp theo.<br>
+           - <strong>Hạng Vàng:</strong> Giảm trực tiếp 2% trên mọi đơn hàng và ưu tiên build máy lấy ngay.<br>
+           - <strong>Hạng Kim Cương:</strong> Tặng quà sinh nhật, bảo hành tận nhà miễn phí trong 1 năm đầu.</p>
+      </div>
+    </div>
+
   </div>
 </main>
 
-<footer class="footer">
-  © 2026 ForsakenShop - Uy tín tạo niềm tin|<a href="policy.html" style="color: #666; text-decoration: none;">Chính sách cửa hàng</a>
+<footer class="footer" style="text-align: center; padding: 20px; border-top: 1px solid #333;">
+  © 2026 ForsakenShop - Uy tín tạo niềm tin | <a href="policy.html" style="color: #666; text-decoration: none;">Chính sách cửa hàng</a>
 </footer>
 
 <script>
   function togglePolicy(header) {
     const item = header.parentElement;
+    
+    // Đóng các mục khác nếu muốn (tùy chọn)
+    // document.querySelectorAll('.policy-item').forEach(i => {
+    //   if(i !== item) i.classList.remove('active');
+    // });
+
     item.classList.toggle('active');
     
-    // Đổi dấu + thành -
+    // Đổi dấu + thành − (dùng dấu gạch ngang dài cho đẹp)
     const span = header.querySelector('span');
     span.innerText = item.classList.contains('active') ? '−' : '+';
   }
