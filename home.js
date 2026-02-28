@@ -198,7 +198,7 @@ let newsList = [
     summary: "Khám phá danh sách những mẫu laptop sở hữu card đồ họa RTX 50-series mới nhất...",
     content: "Nội dung chi tiết bài viết về Laptop Gaming...", // Bạn có thể thêm nội dung dài ở đây
     img: "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=500",
-    content: `
+content: `
     <p>Năm 2026 đánh dấu bước ngoặt lớn của làng Laptop Gaming với sự xuất hiện của dòng card đồ họa Blackwell thế hệ mới. Dưới đây là 5 cái tên xuất sắc nhất do ForsakenShop bình chọn:</p>
 
     <div style="margin-bottom: 25px;">

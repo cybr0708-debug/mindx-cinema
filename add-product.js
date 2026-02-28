@@ -27,4 +27,5 @@ const newProduct = {
   msg.style.color = "#4caf50";
   msg.innerText = "Thêm sản phẩm thành công!";
   form.reset();
+  window.location.href = "home.html";
 });

@@ -24,7 +24,7 @@
       <span class="welcome">
         Xin chào, <b id="username">Khách</b>
       </span>
-      <button class="btn-outline" onclick="toggleCart()">🛒 Giỏ hàng</button>
+      <button class="btn-outline" onclick="toggleCart()">🛒 Giỏ hàng <span id="cartCount" style="background: red; color: white; padding: 2px 6px; border-radius: 50%; font-size: 12px; margin-left: 5px;">0</span></button>
       <button class="btn-outline" onclick="openProfile()">👤 Profile</button>
       <button class="btn-outline" onclick="logout()">Đăng xuất</button>
     </div>
@@ -71,10 +71,8 @@
 </main>
 
 <footer class="footer" style="margin-top: 50px;">
-  © 2026 ForsakenShop - Uy tín tạo niềm tin
-  © 2026 ForsakenShop | <a href="policy.html" style="color: #666; text-decoration: none;">Chính sách cửa hàng</a>
+  © 2026 ForsakenShop - Uy tín tạo niềm tin| <a href="policy.html" style="color: #666; text-decoration: none;">Chính sách cửa hàng</a>
 </footer>
-
 <aside class="cart" id="cart">...</aside>
 <script>
   function sendContact() {
