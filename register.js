@@ -1,4 +1,4 @@
-// Clear input khi load trang
+
 window.onload = () => {
   document.getElementById("regUser").value = "";
   document.getElementById("regPass").value = "";
@@ -24,17 +24,15 @@ function register() {
     return;
   }
 
-  // ✅ LẤY DANH SÁCH USER
+
   let users = JSON.parse(localStorage.getItem("users")) || [];
 
-  // ❌ KIỂM TRA TRÙNG USERNAME
   const isExist = users.some(u => u.username === user);
   if (isExist) {
     msg.innerText = "Tên đăng nhập đã tồn tại!";
     return;
   }
 
-  // ✅ THÊM USER MỚI
   users.push({
     username: user,
     password: pass

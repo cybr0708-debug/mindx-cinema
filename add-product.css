@@ -22,7 +22,6 @@ body {
   flex-direction: column;
 }
 
-/* HEADER */
 .header {
   background: #111;
   position: sticky;
@@ -53,7 +52,6 @@ body {
   text-decoration: none;
 }
 
-/* MAIN */
 .container {
   max-width: 500px;
   margin: 60px auto;
@@ -68,7 +66,6 @@ h1 {
   color: var(--primary);
 }
 
-/* FORM */
 form {
   display: flex;
   flex-direction: column;
@@ -109,13 +106,13 @@ button:hover {
   margin-top: 10px;
 }
 
-/* FOOTER */
 .footer {
   margin-top: auto;
   text-align: center;
   padding: 20px;
   color: #666;
 }
+
 textarea {
   padding: 12px;
   border-radius: 8px;

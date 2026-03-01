@@ -165,15 +165,9 @@
 <script>
   function togglePolicy(header) {
     const item = header.parentElement;
-    
-    // Đóng các mục khác nếu muốn (tùy chọn)
-    // document.querySelectorAll('.policy-item').forEach(i => {
-    //   if(i !== item) i.classList.remove('active');
-    // });
+  
 
     item.classList.toggle('active');
-    
-    // Đổi dấu + thành − (dùng dấu gạch ngang dài cho đẹp)
     const span = header.querySelector('span');
     span.innerText = item.classList.contains('active') ? '−' : '+';
   }

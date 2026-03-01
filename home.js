@@ -161,11 +161,11 @@ function openProfile() {
 }
 function toggleProfile() {
   document.getElementById("profileOverlay").classList.remove("active");
-  hideChangePassForm(); // Reset lại form đổi pass khi đóng
+  hideChangePassForm(); 
 }
 function toggleProfile() {
   document.getElementById("profileOverlay").classList.remove("active");
-  hideChangePassForm(); // Reset lại form đổi pass khi đóng
+  hideChangePassForm(); 
 }
 function toggleCart() { document.getElementById("cart").classList.toggle("active"); }
 function toggleTheme() {
@@ -194,7 +194,6 @@ function saveNewPass() {
     hideChangePassForm();
   }
 }
-// 1. Dữ liệu Tin tức (giống như mảng products)
 let newsList = [
   {
     id: "n1",
@@ -371,10 +370,9 @@ content: `
 },
 ];
 
-// 2. Hàm render Tin tức ra trang news.html
 function renderNews() {
   const newsGrid = document.getElementById("newsGrid");
-  if (!newsGrid) return; // Nếu không phải trang news thì thoát
+  if (!newsGrid) return; 
 
   newsGrid.innerHTML = "";
   newsList.forEach(item => {
@@ -405,53 +403,41 @@ newsGrid.innerHTML += `
   });
 }
 
-// 3. Hàm xử lý khi bấm xem chi tiết (có thể dùng alert hoặc lưu vào localStorage)
+
 function viewNewsDetail(id) {
   const item = newsList.find(n => n.id === id);
   if (item) {
-    // Để đơn giản và nhẹ RAM, ta dùng alert hoặc hiển thị vào 1 cái Modal giống Profile
+    
     alert("Đang mở bài viết: " + item.title + "\n(Tính năng này bạn có thể làm trang news-detail.html tương tự product-detail)");
   }
 }
 
-// 4. Cập nhật hàm chạy khi load trang
 document.addEventListener("DOMContentLoaded", () => {
-  // ... các code cũ của bạn ...
   if (document.getElementById("newsGrid")) {
     renderNews();
   }
 });
-// 1. Hàm này chạy khi bấm nút ở trang news.html
 function viewNewsDetail(id) {
   const item = newsList.find(n => n.id === id);
   if (item) {
-    localStorage.setItem("currentNews", JSON.stringify(item)); // Lưu bài báo vào bộ nhớ
-    window.location.href = "news-detail.html"; // Chuyển trang
+    localStorage.setItem("currentNews", JSON.stringify(item));
+    window.location.href = "news-detail.html"; 
   }
 }
-
-// 2. Hàm này chạy khi trang news-detail.html vừa load xong
 function initNewsDetail() {
   const titleEl = document.getElementById("newsTitle");
-  if (!titleEl) return; // Nếu không phải trang detail thì dừng
+  if (!titleEl) return; 
 
   const news = JSON.parse(localStorage.getItem("currentNews"));
   if (!news) return;
 
-  // Đổ dữ liệu vào HTML
+
   titleEl.innerText = news.title;
   document.getElementById("newsDate").innerText = "Ngày đăng: " + news.date;
   document.getElementById("newsImg").src = news.img;
-  
-  // news.content có thể chứa HTML nếu bạn muốn bài viết có định dạng
   document.getElementById("newsContent").innerHTML = news.content;
 }
-
-// 3. Cập nhật DOMContentLoaded để gọi hàm initNewsDetail
 document.addEventListener("DOMContentLoaded", () => {
-    // ... các code cũ của bạn ...
-    
     if (document.getElementById("newsGrid")) renderNews();
-    
     if (document.getElementById("newsTitle")) initNewsDetail(); // Thêm dòng này
 });

@@ -8,7 +8,6 @@
 </head>
 <body>
 
-<!-- HEADER / NAVBAR -->
 <header class="header">
   <nav class="navbar">
     <div class="nav-left">
@@ -33,16 +32,13 @@
   </nav>
 </header>
 
-<!-- BANNER -->
 <section class="banner">
   <div class="banner-overlay">
-    
     <h1>MUA LAPTOP</h1>
     <p>TẶNG SẠC + BALO</p>
   </div>
 </section>
 
-<!-- TOOLBAR -->
 <section class="toolbar">
   <input
     type="search"
@@ -58,12 +54,10 @@
   </select>
 </section>
 
-<!-- PRODUCTS -->
 <section class="products">
   <div class="products-grid" id="productList"></div>
 </section>
 
-<!-- CART -->
 <aside class="cart" id="cart">
   <button class="cart-close" onclick="toggleCart()">×</button>
   <h2>🛒 Giỏ hàng</h2>
@@ -74,67 +68,64 @@
     Tổng cộng: <strong id="totalPrice">0</strong> đ
   </div>
 </aside>
+
 <div id="profileOverlay" class="profile-overlay" onclick="closeProfileOutside(event)">
   <div class="profile-modal">
     <button class="cart-close" onclick="toggleProfile()">×</button>
     <h2>👤 Hồ sơ cá nhân</h2>
 
     <div class="cart-checkout-form" style="margin-top: 20px;">
-  <label>Tên tài khoản:</label>
-  <input type="text" id="profileUser" readonly style="background: #222; opacity: 0.7;">
+      <label>Tên tài khoản:</label>
+      <input type="text" id="profileUser" readonly style="background: #222; opacity: 0.7;">
 
-  <div id="passwordArea">
-    <label>Mật khẩu hiện tại:</label>
-    <input type="password" id="currentPass" value="********" readonly style="background: #222;">
-    
-    <button class="btn-pay" onclick="showChangePassForm()">Đổi mật khẩu</button>
-  </div>
+      <div id="passwordArea">
+        <label>Mật khẩu hiện tại:</label>
+        <input type="password" id="currentPass" value="********" readonly style="background: #222;">
+        
+        <button class="btn-pay" onclick="showChangePassForm()">Đổi mật khẩu</button>
+      </div>
 
-  <div id="changePassForm" style="display: none; margin-top: 10px; border-top: 1px dashed #444; padding-top: 10px;">
-    <label>Mật khẩu mới:</label>
-    <input type="password" id="newPass" placeholder="Nhập mật khẩu mới">
-    <label>Xác nhận mật khẩu:</label>
-    <input type="password" id="confirmPass" placeholder="Nhập lại mật khẩu mới">
-    
-    <div style="display: flex; gap: 10px; margin-top: 10px;">
-      <button class="btn-pay" style="flex: 1; background: #28a745;" onclick="saveNewPass()">Lưu</button>
-      <button class="btn-pay" style="flex: 1; background: #dc3545;" onclick="hideChangePassForm()">Hủy</button>
-    </div>
-  </div>
-</div>
-      <hr style="margin: 20px 0; border: 0.5px solid #444">
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-        <span>Chế độ giao diện:</span>
-        <button class="btn-outline" onclick="toggleTheme()">🌓 Sáng / Tối</button>
+      <div id="changePassForm" style="display: none; margin-top: 10px; border-top: 1px dashed #444; padding-top: 10px;">
+        <label>Mật khẩu mới:</label>
+        <input type="password" id="newPass" placeholder="Nhập mật khẩu mới">
+        <label>Xác nhận mật khẩu:</label>
+        <input type="password" id="confirmPass" placeholder="Nhập lại mật khẩu mới">
+        
+        <div style="display: flex; gap: 10px; margin-top: 10px;">
+          <button class="btn-pay" style="flex: 1; background: #28a745;" onclick="saveNewPass()">Lưu</button>
+          <button class="btn-pay" style="flex: 1; background: #dc3545;" onclick="hideChangePassForm()">Hủy</button>
+        </div>
       </div>
     </div>
+    <hr style="margin: 20px 0; border: 0.5px solid #444">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <span>Chế độ giao diện:</span>
+      <button class="btn-outline" onclick="toggleTheme()">🌓 Sáng / Tối</button>
+    </div>
   </div>
 </div>
-  <!-- Nút chat tròn góc phải -->
-<button id="chatToggle" style="position:fixed; bottom:20px; left:20px; z-index:9999; width:60px; height:60px; border-radius:50%; background:#ff7a00; color:white; border:none; cursor:pointer; font-size:28px;"> 💬 </button>
-  <!-- Iframe Chatbase -->
-  <iframe id="chatIframe"
-          src="https://www.chatbase.co/chatbot-iframe/PijUonTGEN132p5wH9o1j"
-          style="position:fixed; bottom:90px; left:20px; width:350px; height:500px; border:0; display:none; z-index:9998; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.3);"
 
->
-  </iframe>
-  <script>
-    let flagChatbox = false;
-//hello
-    document.getElementById('chatToggle').addEventListener('click', function() {
-      const chatbox = document.getElementById('chatIframe');
-      if(!flagChatbox){
-        chatbox.style.display = 'block';
-        flagChatbox = true;
-      } else {
-        chatbox.style.display = 'none';
-        flagChatbox = false;
-      }
-    });
-  </script>
-</body>
-<!-- FOOTER -->
+<button id="chatToggle" style="position:fixed; bottom:20px; left:20px; z-index:9999; width:60px; height:60px; border-radius:50%; background:#ff7a00; color:white; border:none; cursor:pointer; font-size:28px;"> 💬 </button>
+
+<iframe id="chatIframe"
+        src="https://www.chatbase.co/chatbot-iframe/PijUonTGEN132p5wH9o1j"
+        style="position:fixed; bottom:90px; left:20px; width:350px; height:500px; border:0; display:none; z-index:9998; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.3);">
+</iframe>
+
+<script>
+  let flagChatbox = false;
+  document.getElementById('chatToggle').addEventListener('click', function() {
+    const chatbox = document.getElementById('chatIframe');
+    if(!flagChatbox){
+      chatbox.style.display = 'block';
+      flagChatbox = true;
+    } else {
+      chatbox.style.display = 'none';
+      flagChatbox = false;
+    }
+  });
+</script>
+
 <footer class="footer">
   © 2026 ForsakenShop|<a href="policy.html" style="color: #666; text-decoration: none;">Chính sách cửa hàng</a>
 </footer>
